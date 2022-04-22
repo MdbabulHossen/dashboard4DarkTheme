@@ -346,12 +346,14 @@ input:checked + .slider:before {
 
 
 
+
 /*---------------sidebar Start-------------*/
 
 .sidebar {
   height: 100vh;
   position: fixed;
-  background-color: #ffffff;
+  background: #232530;
+
   width: 240px;
   transition-duration: 0.5s;
   z-index: 2000;
@@ -369,16 +371,17 @@ input:checked + .slider:before {
 }
 
 .sidebar_logo {
-  background: white;
+  background:#232530;
+
   z-index: 5;
 }
 
 .sidebar_logo {
-  background: white;
+background: #232530;
+  width: 220px;
   position: fixed;
   margin-bottom: 15px;
-  border-bottom: 1px solid rgb(153, 150, 150);
-  margin-left: 5px;
+
 }
 
 .sidebar_logo img {
@@ -389,9 +392,10 @@ input:checked + .slider:before {
 
 .sidebar_ul li{
   position: relative;
+  margin-bottom: 5px;
 }
 
-.sidebar_ul li .sidebar_black_icons{
+/* .sidebar_ul li .sidebar_black_icons{
   margin-left: 20px;
   margin-right: 10px;
 }
@@ -407,22 +411,26 @@ input:checked + .slider:before {
 }
 .sidebar_ul li:hover .sidebar_black_icons{
   display:none;
-}
+} */
 
 
 .sidebar ul li a {
-  color: #000000;
+  color: #FFFFFF;
   width: 100%;
   box-sizing: border-box;
   line-height: 45px;
   font-size: 16px;
   text-decoration: none;
-  font-family: "Inter";
   font-weight: 400;
-  transition: all .3s ease-in;
-  border-radius: 15px;
+  margin-left: 20px;
+  
 }
-
+.iconify{
+  font-size: 23px;
+  top: 30px;  
+  line-height: 4px;
+  margin-bottom: -5px;
+}
 
 .sidebar ul li:first-child {
   margin-top: 68px;
@@ -430,21 +438,36 @@ input:checked + .slider:before {
 
 .sidebar a:hover {
   text-decoration: none;
-  color: white;
-  background: #5160ac;
-  border-radius: 15px;
+  color: #000000;
 }
 
 .sidebar a:hover::after {
   content: "";
   height: 20px;
   width: 2px;
-  background: white;
+  background: #000000;
   position: absolute;
   top: 12px;
   right: 10px;
   border-radius: 5px;
 }
+
+.blackIcon{
+  display: none;
+  margin-bottom: -6px;
+}
+.whiteIcon{
+  margin-bottom: -6px;
+}
+.sidebar_ul li:hover .blackIcon{
+  display: inline-block;
+  
+}
+.sidebar_ul li:hover .whiteIcon{
+  display: none;
+
+}
+
 
 #check {
   display: none;
@@ -464,7 +487,7 @@ label #bars {
   position: fixed;
   background: none;
   width: 50px;
-  color: black;
+  color: rgb(2, 2, 2);
   padding: 10px;
   font-size: 26px;
   z-index: 98;
@@ -502,17 +525,18 @@ label #close {
   display: flex;
   justify-content: space-evenly;
   cursor: pointer;
-  margin-left: -40px;
-  padding-left: 20px;
   position: relative;
+  margin-left: 10px;
 }
 
-/* .sidebar li:hover {
+.sidebar li:hover {
   background: #5160ac;
-} */
+  border-radius: 10px;
+  margin-left: 10px;
+}
 
 .collapse-item-sidebar li a {
-  margin-left: -15px;
+  
   padding-left: 10px;
   border-bottom: 1px dotted lightgray;
   width: 90%;
@@ -522,22 +546,110 @@ label #close {
   border-radius: 5px;
   background: transparent;
 }
+/* Style the active class, and buttons on mouse-over */
+.active {
+  background: #5160ac;
+  color: rgb(0, 0, 0);
+ border-radius: 10px;
+} 
+
+.active::after{
+  content: "";
+  height: 20px;
+  width: 2px;
+  background: #000000;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border-radius: 5px;
+}
+
+.active a{
+  color: rgb(0, 0, 0)!important;
+}
+
+
 
 .collapse-item-sidebar li a:hover {
   background: rgb(247, 240, 240);
 }
 
+
+@media screen and (max-width:1220px) {
+  .sidebar{
+    left: -500px;
+  }
+
+  label #bars{
+    display: block;
+  }
+
+  .search_bar input{
+    width: 600px;
+    left: 80px;
+  }
+
+  .main_body{
+    margin-left: 0px;
+  }
+
+  .inner_search i{
+    left: 95px;
+  }
+
+ 
+}
+
+@media screen and (max-width:790px) {
+  .search_bar input{
+    width: 400px;
+    left: 80px;
+  }
+
+
+}
+
+@media screen and (max-width:580px) {
+  .search_bar input{
+    width: 300px;
+    left: 80px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .search_bar input{
+    width: 250px;
+    left: 60px;
+  }
+
+  .inner_search i{
+    left: 76px;
+  }
+
+  .user_login .user_logo p{
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+
+@media screen and (max-width:385px) {
+  .search_bar input{
+    width: 200px;
+    left: 60px;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
 /*---------------sidebar End----------------*/
-
-
-
-
-
-
-
-
-
-
 
 
 
